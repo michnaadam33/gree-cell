@@ -1,0 +1,42 @@
+{
+    "name": "michnaadam33/green-cell",
+    "description": "Developer TASK",
+    "authors": [
+        {
+            "name": "Adam Michna",
+            "email": "michnaadam33@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-http": "*",
+        "psr/log": "^1.1",
+        "symfony/console": "^5.2",
+        "webmozart/assert": "^1.10",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "App\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "command": "./console.php app:random-word",
+        "test": "phpunit --no-coverage tests",
+        "phpcs": [
+            "phpcs src/ tests/ --standard=PSR12"
+        ],
+        "phpcbf": [
+            "phpcbf src/ tests/ --standard=PSR12"
+        ]
+    }
+}
